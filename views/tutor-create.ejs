@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <script src="https://www.gstatic.com/firebasejs/5.5.3/firebase.js"></script>
+    <script src='./assets/firebaseinitialize.js'></script>
+    <link rel="stylesheet" href="./assets/styles.css">
+  </head>
+  <body>
+    <div class = 'tutor-question'>
+  <% include partials/header.ejs %>
+  <section class="one">
+    <form method="POST">
+      <label for='one'>
+        <p>Sex :
+          <select name="sex">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+          </select>
+        </p>
+        <p>Phone Number : <input type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '');" name='phoneNumber' required></p>
+        <p>Bio :</p>
+        <textarea style="width:80%; max-width:90%;height:10vh;max-height:20vh;font-size:1.2rem" name='bio' required></textarea>
+        <button type="button" name="continue1">Continue</button>
+    </label>
+    <label for="two">
+      <p>What will you teach?</p>
+      <input type="text" name="subject">
+      <button type="button" name="continue2">Continue</button>
+      <button type="button" name="previous-1">Previous</button>
+    </label>
+    <label for="three">
+      <p>How much do you want to rate per hour?</p>
+      <input type="number" palaceholder='$' name='rate'>
+      <button type="button" name="previous-2">Previous</button>
+      <button  onclick={addTutor()} type="button">Submit</button>
+    </label>
+    </form>
+
+  </section>
+</div>
+<script src='./controllers/tutor-create.js'></script>
+</body>
+</html>

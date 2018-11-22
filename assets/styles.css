@@ -1,0 +1,737 @@
+
+:root{
+  --base-background: #836E08 !important ;
+  --header-background : #0f2741 !important;
+}
+ul,p{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+
+}
+li{
+  text-decoration: none;
+  list-style:none;
+}
+a{
+  text-decoration: none;
+  list-style:none;
+  color: #fff;
+  line-height: 1;
+}
+*{
+  box-sizing: border-box;
+}
+body{
+  margin:0 auto;
+  max-width: 1400px;
+  position:relative;
+  color: rgba(255,255,255,0.75);
+  font-family: "Anonymous Pro",monospace;
+}
+img{
+  width:100%;
+  margin: 0;
+  height: auto;
+}
+
+/*  ======================= Others ==============================*/
+
+.tooltip {
+  display: none;
+  overflow: hidden;
+}
+
+.tooltip .tooltiptext {
+  display: none;
+  overflow: hidden;
+
+}
+input[type='search']::placeholder{
+  font-size: 1.1rem;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: hidden;
+}
+
+/*  ======================= End of Others ==============================*/
+
+
+/*  ======================= Menu & Header ==============================*/
+
+header{
+
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    background-color: #0f2741!important;
+    height: 60px;
+    width:100%;
+    max-width: 1400px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-start;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    color:white;
+    padding-top: 3px;
+    padding-bottom: 5px;
+}
+
+.logo{
+  width:150px;
+  min-width: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.menu{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  flex-grow: 1;
+
+}
+
+.menu ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width:100%;
+  line-height: 1;
+}
+
+.menu li {
+  width: 23%;
+  text-align: center;
+  height:100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.menu .profilePic{
+  width: 55px;
+  height: 55px;
+  text-align: center;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  position:inherit;
+  top: 0;
+  background-color: white;
+  overflow: hidden;
+}
+
+.menu a{
+  line-height: 1;
+  text-align: center;
+  width:100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.active{
+background: linear-gradient(0.50turn,rgba(255,255,255,0.3) 25%, rgba(0,0,0,0.1));
+}
+
+
+/*  ======================= Menu ends here ==============================*/
+/* ========================Login page======================== */
+
+.loginPage-container{
+  width:100%;
+  min-height: 100vh;
+  margin-top: 0;
+  padding: 0;
+  margin: 0 auto;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.loginPage-innerContainer{
+  width:330px;
+  height: 540px;
+  background: linear-gradient(0.90turn, var(--base-background), #000 110%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 2px 2px 5px #888888;
+}
+
+.loginPage-innerContainer .loginPage-profile{
+  width: 90px;
+  height: 90px;
+  border: 2px solid black;
+  border-radius: 50%;
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+.loginPage-innerContainer .loginPage-profile span{
+  width: 100%;
+  text-align: center;
+  font-size: 3.3rem;
+}
+.loginPage-innerContainer .loginPage-text{
+  text-align: center;
+  height: 50px;
+  margin-bottom: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+.loginPage-innerContainer .loginPage-text p{
+  width:100%;
+  text-align: center;
+  font-size: 2rem;
+  text-shadow: 0 1.5px 2px ;
+  margin:0 auto;
+}
+/* ========================End of Login page ======================== */
+
+/* ======================== Profile-deatil on homepage ======================== */
+.menu li.profile-details{
+  position: absolute;
+  z-index: 10;
+  visibility: hidden;
+  top:4rem;
+  right:2rem;
+  height:420px;
+  min-height: 420px;
+  background:linear-gradient(0.90turn, var(--base-background), #000 110%);
+  box-shadow: 2px 2px 5px #888888;
+  width:293px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.menu li.show {
+  visibility: visible;
+}
+.profileContainer{
+  width:100%;
+  height: 410px;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  margin: 0 auto;
+}
+.profileBrief{
+  width: 95%;
+  padding: 5px 5px;
+  border: 1px solid black;
+  height: 100%;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content:flex-start;
+  align-items:flex-start;
+  flex-wrap: nowrap;
+  text-align: center;
+}
+
+
+.userBio{
+  width:100%;
+  height:100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items:flex-start;
+  flex-direction: column;
+  margin-top: 0.5rem;
+}
+.disName{
+  font-size: 1.3rem;
+  margin: 0 auto;
+  width:100%;
+  margin-top: 1rem;
+  margin-bottom: 0.3rem;
+}
+
+.e-mail,.userId,.phoneNumber,.emailVerified, .education{
+  width:100%;
+  text-align: left;
+  padding-left: 10px;
+  font-size: 0.9rem;
+  overflow: hidden;
+  color:darkgray;
+}
+ .proEdit,.notifications,.message{
+  width:100%;
+  height: auto;
+  border-bottom: 3px dotted black;
+  padding-bottom: 5px;
+  pointer:cursor;
+  margin-bottom: 2rem;
+  font-size: 1.3rem
+}
+
+.anchorProedit{
+  display: flex;
+  flex-direction: column;
+}
+.signOutBlock{
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: flex-end;
+}
+
+.signOutBlock button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: white;
+  background-color: #0f2741!important;
+  box-sizing: border-box;
+  padding: 2px 6px 3px;
+  padding-left: 6em;
+  border-style: outset;
+  border-color: black;
+  text-rendering:optimizeLegibility;
+  text-shadow: none;
+  display: inline-block;
+  text-align: start;
+  width:100%;
+  height:35px;
+  margin: 0em;
+  font: 600 16px Arial;
+}
+/* .editBlock{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: white;
+  background-color: red;
+  box-sizing: border-box;
+  padding: 2px 6px 3px;
+  padding-left: 6em;
+  border-style: outset;
+  border-color: black;
+  text-rendering:optimizeLegibility;
+  text-shadow: none;
+  display: inline-block;
+  text-align: start;
+  width:100%;
+  height:35px;
+  margin: 0em;
+  font: 600 16px Arial;
+} */
+
+.first{
+  height: 80vh;
+  width:100%;
+  padding-top: 60px;
+  background-color: rgba(0,0,0,0.75);
+
+}
+.landing-view{
+  width:100%;
+  height: 100%;
+  display: flex;
+  z-index: -1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.tagline{
+  font-size: 2em;
+  width:100%;
+  margin: 0 auto;
+}
+
+.tagline h2{
+  width:100%;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 2.5em;
+  text-shadow: 0 1.5px 2px ;
+  position: relative;
+}
+.tagline span{
+  position: absolute;
+  top:90px;
+  right:0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 0.3em;
+  color: rgba(0,0,0,0.75);
+}
+.searchbar{
+  width:100%;
+  height: 100%;
+  margin: 0 auto;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.searchbar form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width:70%;
+  line-height: 4;
+}
+
+.searchbar form input:nth-child(1){
+    width:100%;
+    max-width: 500px;
+    border: 2px solid black;
+    font-size: 2rem;
+}
+
+/* ===================== Home Page =================*/
+.availableTutors,.topics{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  margin-bottom: 0.5rem;
+  width:100%;
+
+}
+.top{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width:100%;
+  font-size: 0.7rem;
+  align-items: center;
+  background-color: var(--header-background);
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+.popularTopics,.tutor-brief{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items:center;
+  text-align: center;
+}
+.topic-frame{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  border:1px solid black;
+  width:170px;
+  height:205px;
+  margin-top: 0.5rem;
+  margin-right: 0.3rem;
+  margin-left: 0.3rem;
+  background-color: var(--base-background);
+  position: relative;
+}
+
+.tutor-img{
+  width:100%;
+  height:130px;
+  overflow: hidden;
+  object-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tutor-brief-info{
+  width:100%;
+  height: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.tutor-online{
+  border: 1px solid black;
+  background: green;
+  width:17px;height: 17px;
+  border-radius: 50%;
+  position: absolute;
+  top:0;right:0;
+}
+
+/* =============== home ends here  ===============*/
+/* ============== Tutor ====================== */
+.tutor-question{
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+.one {
+  background-color: pink;
+  width:80%;
+  position: absolute;
+  top:6rem;
+  color:black;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.one form{
+  width: 100%;
+  background-color: green;
+}
+form input:nth-child(1){
+  width:20%;
+  float: none;
+}
+
+label[for='two'],label[for='three']{
+  display: none;
+  overflow: hidden;
+}
+
+
+
+/* ============== Tutor ends here ====================== */
+/* ============== User Profile Page ====================== */
+.userProfilePageContainer,.tutor-container{
+  margin: 0 auto;
+  width:100%;
+  background-color: var(--base-background);
+  padding-top: 60px;
+  height:auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.userProfilePageinnerContainer,.tutor-basic-details{
+  width:90%;
+  height:auto;
+  border:1px solid black;
+  margin-top:1rem;
+  margin-bottom:1rem;
+  display: flex;
+  flex-direction: column;
+}
+.userContent{
+  width:100%;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+#tabbed-content ul{
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  font-size: 1.2rem;
+}
+#tabbed-content ul li{
+  width:80%;
+  margin-top: 0.5rem;
+  padding: 0.5rem 0.5rem;
+  border-bottom: 1px dotted black;
+}
+.Desc{
+  width:100%;
+  height:60%;
+  display: flex;
+  text-align: center;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+}.userid{
+  margin: 0 auto;
+}
+.userProfileIMG,.tutor-imgage{
+  width:100px;
+  height:100px;
+  border-radius: 50%;
+  border:1px solid black;
+  display: flex;
+  text-align: center;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.userProfileName {
+  margin: 0 auto;
+  margin-top: 0.2rem;
+  margin-bottom: 0.5rem;
+}
+.userProfile,.userPhoto,.closeAccount{
+  width: 100%;
+  margin-top: 0.3rem;
+  text-align: left;
+  padding: 0.2rem 1rem;
+
+}
+.userProfile,.userPhoto {
+  border-bottom: 1px dotted black;
+
+}
+.publicProfile{
+  width:100%;
+  height: 100%;
+}
+.publicProfile .heading1{
+  background: var(--header-background);
+  width:100%;
+  height: 23%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.3rem;
+}
+
+.publicProfile .heading1 span{
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+}
+
+.publicProfile .editableContent{
+  width:70%;
+  height:77%;
+  display: flex;
+  flex-direction: column;
+  justify-content:space-around;
+  align-items: center;
+  padding: 1rem 0.5rem 0 0.5rem;
+  font-size: 1.1rem;
+  margin: 0 auto;
+}
+
+.publicProfile label {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width:100%;
+}
+.publicProfile label input{
+width:80%;
+}
+
+.publicProfile .editableContent button{
+  width:100%;
+  background-color: green;
+  line-height: 2;
+  border-width: none;
+    border-style: none;
+    border-color: none;
+}
+
+.pannel{
+ display:none;
+}
+.active{
+   display: block;
+}
+/* ============== End of User Profile Page ====================== */
+/* ============== Tutor Profile Page ====================== */
+.tutor-container{
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100vh;
+}
+
+ .tutor-basic-details ul:first-child{
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+
+.tutor-profile-details {
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0.5rem;
+}
+.tutor-profile-details li{
+  width:100%;
+}
+.hire{
+  width:100%;display: flex;
+  flex-direction: column;
+}
+/* ============== End ofTutor Profile Page ====================== */
+
+
+
+/* Media queries begin here */
+
+/* ============== Menu& header ====================== */
+@media screen and (min-width: 600px) {
+
+.menu ul {
+  width: 95%;
+  max-width: 700px;
+}
+
+/* ==================== Menu& header =============================*/
+
+/*  ======================= others ==============================*/
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 100px;
+    top: 100%;
+    background-color: rgba(0,0,0,0.4);
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 2px 0;
+    right: 1rem;
+    font-size: 10px;
+    /* Potion the tooltip */
+    position: absolute;
+    z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+/*  ======================= end of others ==============================*/
+
+}

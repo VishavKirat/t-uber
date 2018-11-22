@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Tutor</title>
+    <script src="https://www.gstatic.com/firebasejs/5.5.3/firebase.js"></script>
+    <script src='./assets/firebaseinitialize.js'></script>
+    <link rel="stylesheet" href="./assets/styles.css">
+  </head>
+  <body style="color:black">
+  <% include partials/header.ejs %>
+  <div class='tutor-container'>
+    <section class='tutor-basic-details'>
+      <ul>
+      <li class='tutor-imgage'><img src="" alt=""></li>
+      <ul class='tutor-profile-details'>
+        <li class="name"></li>
+        <li class="age"></li>
+        <li class="sex"></li>
+        <li class="rate"></li>
+        <li class="expertise"></li>
+        <li class="Address"></li>
+        <li class="Email"></li>
+        <li class="tutorphoneNumber"></li>
+        <li class="bio"></li>
+      </ul>
+      </ul>
+    </section>
+    <section class='tabbed'>
+
+    </section>
+    <section class='hire'><button>Hire</button></section>
+  </div>
+  <script src='./controllers/tutorProfile.js'></script>
+</body>
+</html>

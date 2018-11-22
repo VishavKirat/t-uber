@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://www.gstatic.com/firebasejs/5.5.3/firebase.js"></script>
+  <script src='./assets/firebaseinitialize.js'></script>
+  <link rel="stylesheet" href="./assets/styles.css">
+  <title>Profile</title>
+</head>
+<body>
+  <% include partials/header.ejs %>
+  <div class='userProfilePageContainer'>
+  <div class='userProfilePageinnerContainer'>
+    <div class='userContent'>
+      <div class='userProfileIMG'><img src="" alt="..."></div>
+      <div class='userProfileName'></div>
+      <div class='userid'></div>
+    </div>
+    <div id='tabbed-content'>
+     <ul class='tab'>
+       <li data-target='#userProfile' >Profile</li>
+       <li data-target='#closeAccount'>Close Account</li>
+     </ul>
+     <div class='Desc'>
+       <div class='publicProfile pannel active' id ='userProfile'>
+           <div class='heading1'>Public Profile <br><span>Add information about yourself</span></div>
+           <div class="editableContent">
+             <label for="name">
+             <p>Display Name :</p>
+             <input type="text" name='userProfileName'required>
+             </label><br>
+             <label for="age" name='age'>
+               <p>Age:</p>
+               <input type="number" required>
+             </label><br>
+             <label for="education" name='education'>
+               <p>Education:</p>
+               <input type="text" required>
+             </label><br>
+             <label for="phoneNumber">
+               <p>Phone :</p>
+               <input type="text" name='phoneNumber' required>
+             </label><br>
+             <button class='save'>Save</button>
+           </div>
+       </div>
+       <div class="publicProfile pannel" id ='closeAccount'>
+         <div class='heading1'>Close Account <br></div>
+        <p>Are you sure you want to delete the account? </p>
+        <button class='delete'>Delete Account</button>
+      </div>
+   </div>
+  </div>
+
+</div>
+  </div>
+  <script src="./controllers/userProfile.js"></script>
+</body>
+</html>

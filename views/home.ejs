@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <script src="https://www.gstatic.com/firebasejs/5.5.3/firebase.js"></script>
+    <script src='./assets/firebaseinitialize.js'></script>
+    <link rel="stylesheet" href="./assets/styles.css">
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.js'></script>
+  </head>
+  <body>
+  <% include partials/header.ejs %>
+  <section class='first'>
+    <div class='landing-view'>
+      <div class='tagline anim-typerwriter'>
+        <h2>T-Uber <span>Where Curiosity Meets Excellence</span></h2>
+      </div>
+      <div class='searchbar'>
+        <form method="search" action='/onlinetutors'>
+          <input type="search" placeholder='search the subject of interest' name='subject' value=''>
+        </form>
+      </div>
+      </div>
+
+  </section>
+  <section class='topics'>
+    <div class='top'>
+      <h2>Popular and trending topics</h2>
+      <a href="/tutors">See all> </a>
+    </div>
+    <div class='popularTopics'>
+      <div class='Maths topic-frame'>
+      <h3>Mathemetics</h3>
+      </div>
+      <div class='CSE topic-frame'>
+      <h3>Computer Science</h3>
+      </div>
+      <div class='english topic-frame'>
+      <h3>English</h3>
+      </div>
+      <div class='business topic-frame'>
+      <h3>Business</h3>
+      </div>
+      <div class='psycology topic-frame'>
+      <h3>Psycology</h3>
+      </div>
+      <div class='guitar topic-frame'>
+      <h3>Guitar</h3>
+      </div>
+    </div>
+  </section>
+  <section class='availableTutors'>
+    <div class='top'>
+      <h2>Available Tutors</h2>
+      <a href="/tutors">See all> </a>
+    </div>
+    <div class='tutor-brief'></div>
+  </section>
+  <script src='./controllers/home.js'></script>
+</body>
+</html>

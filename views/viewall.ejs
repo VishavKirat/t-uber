@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <script src="https://www.gstatic.com/firebasejs/5.5.3/firebase.js"></script>
+    <script src='./assets/firebaseinitialize.js'></script>
+    <link rel="stylesheet" href="./assets/styles.css">
+    <title></title>
+  </head>
+  <body>
+  <% include partials/header.ejs %>
+  <div class="fullArea">
+    <div class="options">
+      <div class="subject">
+        <select name="subject">
+          <option value="Mathematics">Mathematics</option>
+          <option value="HTML">HTML</option>
+          <option value="Computer Science">Computer Science</option>
+          <option value="Punjabi">Punjabi</option>
+          <option value="English">English</option>
+          <option value="French">French</option>
+          <option value="Business">Business</option>
+          <option value="Arts">Arts</option>
+        </select>
+      </div>
+      <div class="location">
+        <select name="within">
+          <option value="5kms">5kms</option>
+          <option value="10kms">10kms</option>
+          <option value="20kms">20Kms</option>
+          <option value="40kms">40kms</option>
+          <option value="50kms">50kms</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  </body>
+</html>
